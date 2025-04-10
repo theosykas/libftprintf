@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:39 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 16:17:46 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/10 19:15:55 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 	return (len);
 }*/
 
-char	*ft_strdup(const char *source)
+/*char	*ft_strdup(const char *source)
 {
 	char	*str;
 	size_t	i;
@@ -42,7 +42,7 @@ char	*ft_strdup(const char *source)
 	}
 	str[i] = '\0';
 	return (str);
-}
+}*/
 
 static int	count_digits(int n)
 {

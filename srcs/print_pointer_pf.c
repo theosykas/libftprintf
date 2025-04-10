@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:37 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 16:17:03 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/10 18:49:19 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	print_pointer_pf(void *ptr)
 	if (ptr == 0)
 	{
 		write (1, "(nil)", 5);
-		return (1);
+		return (5);
 	}
 	hex = convert_base((unsigned long)ptr, HEX_BASE_LOWER);
 	if (!hex)
