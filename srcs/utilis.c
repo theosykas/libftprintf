@@ -1,18 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_pointer_pf.c                                 :+:      :+:    :+:   */
+/*   utilis.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 20:51:37 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 16:17:03 by theo             ###   ########.fr       */
+/*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
+/*   Updated: 2025/04/10 16:04:06 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../printf.h"
 
-/*char	*convert_base(unsigned int n, const char *base)
+size_t	ft_strlen( const char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_strdup(const char *source)
+{
+	char	*str;
+	size_t	i;
+
+	if (!source)
+		return (NULL);
+	str = malloc(sizeof(char) * (ft_strlen(source) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (source[i])
+	{
+		str[i] = source[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+char	*convert_base(unsigned int n, const char *base)
 {
 	char			*res;
 	int				len_base;
@@ -39,28 +71,4 @@
 		n /= len_base;
 	}
 	return (res);
-}*/
-
-int	print_pointer_pf(void *ptr)
-{
-	int		i;
-	char	*hex;
-
-	if (ptr == 0)
-	{
-		write (1, "(nil)", 5);
-		return (1);
-	}
-	hex = convert_base((unsigned long)ptr, HEX_BASE_LOWER);
-	if (!hex)
-		return (0);
-	write (1, "0x", 2);
-	i = 0;
-	while (hex[i] != '\0')
-	{
-		write (1, &hex[i], 1);
-		i++;
-	}
-	free (hex);
-	return (i + 2);
 }

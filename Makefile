@@ -16,7 +16,8 @@ SRCS	= srcs/ft_putchar_lf.c \
           srcs/print_unsigned_pf.c \
           srcs/print_hex_pf.c \
           srcs/print_percent_pf.c \
-          srcs/ft_printf.c
+          srcs/ft_printf.c \
+          srcs/utilis.c
 
 # 🔨 Generate object files
 OBJS	= $(SRCS:.c=.o)

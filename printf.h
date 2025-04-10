@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:37:53 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 14:02:55 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/10 16:05:33 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@
 # define HEX_BASE_UPPER "0123456789ABCDEF"
 
 int			ft_printf(const char *s, ...);
+
+size_t		ft_strlen(const char *str);
+char		*ft_strdup(const char *source);
+char		*convert_base(unsigned int n, const char *base);
 
 int			formats_print(va_list args, const char specifier);
 int			ft_putchar_lf(int c);
