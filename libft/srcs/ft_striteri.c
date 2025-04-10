@@ -6,16 +6,16 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 14:44:57 by theo              #+#    #+#             */
-/*   Updated: 2025/04/09 18:09:30 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/09 20:44:43 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void				ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
-	
+	int	i;
+
 	if (!s || !f)
 		return ;
 	i = 0;
