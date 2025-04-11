@@ -6,13 +6,13 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 16:33:34 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 17:27:29 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
-size_t	ft_strlen( const char *str)
+/*size_t	ft_strlen( const char *str)
 {
 	size_t	len;
 
@@ -22,9 +22,9 @@ size_t	ft_strlen( const char *str)
 		len++;
 	}
 	return (len);
-}
+}*/
 
-char	*ft_strdup(const char *source)
+/*char	*ft_strdup(const char *source)
 {
 	char	*str;
 	size_t	i;
@@ -42,7 +42,7 @@ char	*ft_strdup(const char *source)
 	}
 	str[i] = '\0';
 	return (str);
-}
+}*/
 
 char	*convert_base(unsigned int n, const char *base)
 {

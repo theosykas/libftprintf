@@ -6,11 +6,11 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:42 by theo              #+#    #+#             */
-/*   Updated: 2025/04/10 16:17:17 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 17:03:53 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
 /*size_t	ft_strlen( const char *str)
 {
