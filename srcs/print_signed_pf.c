@@ -6,43 +6,11 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:39 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 17:03:47 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 18:15:17 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-
-/*size_t	ft_strlen( const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}*/
-
-/*char	*ft_strdup(const char *source)
-{
-	char	*str;
-	size_t	i;
-
-	if (!source)
-		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(source) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (source[i])
-	{
-		str[i] = source[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}*/
 
 static int	count_digits(int n)
 {
@@ -85,18 +53,18 @@ char	*ft_itoa(int n)
 
 int	print_signed_pf(int n)
 {
-	char	*new;
-	int		i;
+	char	*conv;
+	int		len;
 
-	new = ft_itoa(n);
-	if (!new)
+	conv = ft_itoa(n);
+	if (!conv)
 		return (0);
-	i = 0;
-	while (new[i] != '\0')
+	len = 0;
+	while (conv[len])
 	{
-		write (1, &new[i], 1);
-		i++;
+		write (1, &conv[len], 1);
+		len++;
 	}
-	free (new);
-	return (i);
+	free (conv);
+	return (len);
 }

@@ -6,43 +6,11 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 17:27:29 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 17:50:30 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-
-/*size_t	ft_strlen( const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}*/
-
-/*char	*ft_strdup(const char *source)
-{
-	char	*str;
-	size_t	i;
-
-	if (!source)
-		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(source) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (source[i])
-	{
-		str[i] = source[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}*/
 
 char	*convert_base(unsigned int n, const char *base)
 {
