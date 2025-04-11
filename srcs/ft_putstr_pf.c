@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:29 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 17:56:30 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 20:55:04 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@ int	ft_putstr_pf(char *str)
 	int	i;
 
 	if (!str)
-	{
 		return (write(1, "(null)", 6));
-	}
 	i = 0;
 	while (str[i])
-	{
-		write (1, &str[i], 1);
-		i++;
-	}
+		write (1, &str[i++], 1);
 	return (i);
 }

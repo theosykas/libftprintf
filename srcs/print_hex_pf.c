@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:32 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 18:09:36 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 20:55:19 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,11 @@ int	print_hex_pf(unsigned int n, int uppercase)
 	else
 		base = HEX_BASE_LOWER;
 	if (n == 0)
-	{
 		return (write (1, "0", 1));
-	}
-	res = convert_base(n, base);
+	res = conver_base(n, base);
 	len = 0;
 	while (res[len])
-	{
-		write (1, &res[len], 1);
-		len++;
-	}
+		write (1, &res[len++], 1);
 	free (res);
 	return (len);
 }

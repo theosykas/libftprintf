@@ -6,27 +6,23 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 17:50:30 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 20:16:21 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	*convert_base(unsigned int n, const char *base)
+char	*conver_base(unsigned int n, const char *base)
 {
 	char			*res;
-	int				len_base;
 	int				len;
 	unsigned int	tmp;
 
-	len_base = 0;
-	while (base[len_base])
-		len_base++;
 	len = 1;
 	tmp = n;
-	while (tmp / len_base != 0)
+	while (tmp / 16 != 0)
 	{
-		tmp /= len_base;
+		tmp /= 16;
 		len++;
 	}
 	res = malloc(sizeof(char) * (len + 1));
@@ -35,8 +31,8 @@ char	*convert_base(unsigned int n, const char *base)
 	res[len] = '\0';
 	while (len > 0)
 	{
-		res[--len] = base[n % len_base];
-		n /= len_base;
+		res[--len] = base[n % 16];
+		n /= 16;
 	}
 	return (res);
 }

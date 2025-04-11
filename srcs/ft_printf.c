@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 21:11:54 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 17:29:42 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 20:01:40 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,19 @@ int	ft_printf(const char *s, ...)
 {
 	va_list	args;
 	int		count;
-	int		i;
 
 	va_start(args, s);
-	i = 0;
 	count = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == '%' && s[i + 1])
+		if (*s == '%' && *(s + 1))
 		{
-			count += formats_print(&args, s[i + 1]);
-			i++;
+			count += formats_print(&args, *(s + 1));
+			s++;
 		}
 		else
-			count += ft_putchar_lf(s[i]);
-		i++;
+			count += ft_putchar_lf(*s);
+		s++;
 	}
 	va_end(args);
 	return (count);

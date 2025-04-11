@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:39 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 18:15:17 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/11 20:55:41 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,7 @@ int	print_signed_pf(int n)
 		return (0);
 	len = 0;
 	while (conv[len])
-	{
-		write (1, &conv[len], 1);
-		len++;
-	}
+		write (1, &conv[len++], 1);
 	free (conv);
 	return (len);
 }
