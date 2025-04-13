@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:37:53 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 20:49:02 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/13 19:05:32 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			ft_printf(const char *s, ...);
 
 size_t		ft_strlen(const char *str);
 char		*ft_strdup(const char *source);
-char		*conver_base(unsigned int n, const char *base);
+char		*conver_base(unsigned long n, const char *base);
 
 int			formats_print(va_list *args, const char specifier);
 int			ft_putchar_lf(int c);

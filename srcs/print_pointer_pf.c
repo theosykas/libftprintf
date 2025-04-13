@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:37 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 20:55:31 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/13 19:16:32 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	print_pointer_pf(void *ptr)
 {
-	int		i;
+	int		len;
 	char	*hex;
 
 	if (!ptr)
@@ -22,10 +22,10 @@ int	print_pointer_pf(void *ptr)
 	hex = conver_base((unsigned long)ptr, HEX_BASE_LOWER);
 	if (!hex)
 		return (0);
-	write (1, "0x", 2);
-	i = 0;
-	while (hex[i] != '\0')
-		write (1, &hex[i++], 1);
+	ft_putstr_fd("0x", 1);
+	len = 0;
+	while (hex[len])
+		write (1, &hex[len++], 1);
 	free (hex);
-	return (i + 2);
+	return (len + 2);
 }

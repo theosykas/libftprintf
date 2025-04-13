@@ -9,7 +9,7 @@ RM		= rm -f
 NAME	= libftprintf.a
 
 
-SRCS	= srcs/ft_putchar_lf.c \
+SRCS	= srcs/ft_putchar_pf.c \
           srcs/ft_putstr_pf.c \
           srcs/print_pointer_pf.c \
           srcs/print_signed_pf.c \

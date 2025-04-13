@@ -6,13 +6,13 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 20:16:21 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/13 19:05:10 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	*conver_base(unsigned int n, const char *base)
+char	*conver_base(unsigned long n, const char *base)
 {
 	char			*res;
 	int				len;

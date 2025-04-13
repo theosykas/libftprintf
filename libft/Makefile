@@ -48,18 +48,18 @@ bonus: $(NAME) $(BONUS_OBJS)
 	@$(AR) $(NAME) $(BONUS_OBJS)
 	@echo "$(CYAN)😏 Libft With Bonus Compiled!$(RESET)"
 
-# 🧹 Clean object files
+
 clean:
 	@$(RM) $(OBJS) $(BONUS_OBJS)
 	@echo "$(RED)🀃 Object files removed.$(RESET)"
 
-# 🗑️ Full cleanup
+
 fclean: clean
 	@$(RM) $(NAME)
 	@echo "$(RED)🃅  libft.a removed.$(RESET)"
 
-# 🔄 Recompile from scratch
+
 re: fclean all
 
-# 📌 Rules to prevent `make` from treating these as targets
+
 .PHONY: all clean fclean re bonus
