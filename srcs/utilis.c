@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/13 19:05:10 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/14 20:32:00 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*conver_base(unsigned long n, const char *base)
 {
 	char			*res;
 	int				len;
-	unsigned int	tmp;
+	unsigned long	tmp;
 
 	len = 1;
 	tmp = n;
