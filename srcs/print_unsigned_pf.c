@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:42 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 20:55:56 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/16 18:58:07 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*uitoa(unsigned int n)
 	if (nb == 0)
 		return (ft_strdup("0"));
 	len = count_digits(nb);
-	str = malloc(sizeof(char) * (len + 1));
+	str = calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	while (len > 0)

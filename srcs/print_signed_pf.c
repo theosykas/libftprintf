@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:39 by theo              #+#    #+#             */
-/*   Updated: 2025/04/11 20:55:41 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/16 18:59:18 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,5 @@ int	print_signed_pf(int n)
 	free (conv);
 	return (len);
 }
+
+//str = malloc(sizeof(char) * (len + 1));

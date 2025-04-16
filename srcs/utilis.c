@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 16:02:52 by theo              #+#    #+#             */
-/*   Updated: 2025/04/14 20:32:00 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/16 18:58:46 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*conver_base(unsigned long n, const char *base)
 		tmp /= 16;
 		len++;
 	}
-	res = malloc(sizeof(char) * (len + 1));
+	res = calloc(len + 1, sizeof(char));
 	if (!res)
 		return (0);
 	res[len] = '\0';
