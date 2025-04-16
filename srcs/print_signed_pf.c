@@ -6,7 +6,7 @@
 /*   By: theo <theo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:51:39 by theo              #+#    #+#             */
-/*   Updated: 2025/04/16 18:59:18 by theo             ###   ########.fr       */
+/*   Updated: 2025/04/16 19:12:33 by theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	if (nb == 0)
 		return (ft_strdup("0"));
 	len = count_digits(nb) + (n < 0);
-	str = malloc(sizeof(char) * (len + 1));
+	str = calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	if (nb < 0)
@@ -65,5 +65,3 @@ int	print_signed_pf(int n)
 	free (conv);
 	return (len);
 }
-
-//str = malloc(sizeof(char) * (len + 1));
